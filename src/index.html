@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
   <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+  <div class="container">
+    <h2>Login</h2>
+    
+    <!-- Google Login Button -->
+    <a href="http://localhost:5000/auth/google"><button class="google-login">Continue with Google</button></a>
+    
+    <!-- Admin Login Button -->
+    <button class="admin-login" onclick="openAdminPopup()">Admin Login</button>
+  </div>
 
+  <!-- Admin Popup -->
+  <div id="adminPopup" class="admin-popup">
+    <div class="admin-popup-content">
+      <span class="close" onclick="closeAdminPopup()">&times;</span>
+      <h2>Admin Login</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

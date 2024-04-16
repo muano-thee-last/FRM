@@ -19,6 +19,7 @@
   "homepage": "https://github.com/muano-thee-last/FRM#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "passport": "^0.7.0",

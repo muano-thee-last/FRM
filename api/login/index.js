@@ -3,14 +3,18 @@ const express = require('express'); // Express.js framework for handling HTTP re
 const session = require('express-session'); // Express.js middleware for session management
 const passport = require('passport'); // Passport.js for authentication
 const path = require('path'); // Node.js module for working with file paths
+const cors = require('cors');
 require('./auth'); // Custom authentication configuration
 
 // Create Express application
 const app = express();
 
 // Configure session middleware
+app.use(cors())
 app.use(session({
-  secret: 'cat', // Secret key used to sign the session ID cookie
+  secret: 'cat',
+  resave: true,
+  saveUninitialized: true
 }));
 
 // Initialize Passport middleware

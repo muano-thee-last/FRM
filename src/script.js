@@ -7,3 +7,5 @@ function openAdminPopup() {
   function closeAdminPopup() {
     document.getElementById("adminPopup").style.display = "none";
   }
+
+const response = await fetch('http://localhost:5000/');
